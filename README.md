@@ -71,3 +71,33 @@ Provider interfaces can change; follow current official documentation.
 5. Offer sponsored listings only after you have a real audience or demonstrable value, and label them clearly.
 
 This starter project is a foundation, not a completed business or legal-compliance package.
+
+## International Student Life section
+- `student-life.html` is the hub, with search and category filters. The six guides live in `guides/`.
+- `student.js` runs the search, the "Was this helpful?" buttons, the saved checklists, and the suggestion form.
+- `suggest.html` is the correction and new-topic form.
+- `functions/api/feedback.js` and `functions/api/suggest.js` are Cloudflare Pages Functions that store answers and suggestions in a free Cloudflare D1 database.
+- After editing or adding a guide, rebuild the search index with `node tools/build-search-index.mjs`, then commit `search-index.json`.
+- Every guide shows a "Last verified" date. When you re-check a guide against its official sources, update that date (the `<time datetime="…">` near the top of the page) and the `lastmod` in `sitemap.xml`.
+
+### Preview locally
+Static pages only (search, checklists, and layout work; feedback and the form show an error because there is no server):
+```bash
+npx --yes serve@14.2.4 . -l 8000
+```
+Full preview including feedback and the form, using Cloudflare's local dev server and a local test database:
+```bash
+npx --yes wrangler@4.20.0 pages dev . --d1 DB=local-dev --port 8788
+```
+Then open `http://127.0.0.1:8788/student-life`. Test data is stored in `.wrangler/` (ignored by Git).
+
+### Turn on feedback storage on Cloudflare (one time, free)
+1. In the Cloudflare dashboard, open **Storage & Databases → D1** and create a database, for example `istanbul-student-guide`.
+2. Open **Workers & Pages →** your Pages project **→ Settings → Bindings → Add → D1 database**. Set the variable name to `DB` and select the new database. Add it for Production (and Preview if you want).
+3. Redeploy (push a commit, or use **Deployments → Retry deployment**). Tables are created automatically on first use.
+4. Read submissions in **D1 → your database → Console**:
+   ```sql
+   SELECT * FROM suggestions ORDER BY created_at DESC;
+   SELECT page, SUM(helpful) AS yes, COUNT(*) - SUM(helpful) AS no FROM feedback GROUP BY page;
+   ```
+Until the binding exists, the buttons and the form show a polite "could not be saved" message; nothing else breaks.

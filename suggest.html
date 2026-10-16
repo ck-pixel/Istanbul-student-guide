@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Report outdated or incorrect information, or suggest a new topic for the Istanbul Student Guide.">
+  <meta name="theme-color" content="#163b35">
+  <title>Suggest a correction or topic — Istanbul Student Guide</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://istanbul-student-guide.pages.dev/suggest">
+  <meta property="og:url" content="https://istanbul-student-guide.pages.dev/suggest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Istanbul Student Guide">
+  <meta property="og:title" content="Suggest a correction or topic — Istanbul Student Guide">
+  <meta property="og:description" content="Report outdated or incorrect information, or suggest a new topic for the Istanbul Student Guide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">IS</span><span>Istanbul Student Guide<small>Make the city easier</small></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button><nav class="nav" id="site-nav" aria-label="Main"><a href="index.html#guides">Guides</a><a href="student-life.html">Student life</a><a href="index.html#essentials">Essentials</a><a href="about.html">About</a></nav>
+  </header>
+  <main id="main" class="article">
+    <p class="eyebrow">Help improve the guide</p>
+    <h1>Suggest a correction or a new topic.</h1>
+    <p class="lead">Rules and prices in Istanbul change often. If something is wrong, outdated, or missing, tell us. Please include a link to the official source if you have one.</p>
+    <div class="box box-tip"><p>Do not include passport numbers, residence permit numbers, or other personal documents. We read every message, but we cannot give individual legal or immigration advice.</p></div>
+    <form class="form-grid" id="suggest-form" action="/api/suggest" method="post" novalidate>
+      <div class="field"><fieldset><legend>What kind of message is this?</legend>
+        <div class="radio-row"><label><input type="radio" name="type" value="correction" required checked> A correction</label><label><input type="radio" name="type" value="topic"> A new topic</label></div>
+      </fieldset></div>
+      <div class="field"><label for="suggest-page">Which page is it about?</label><select id="suggest-page" name="page"><option value="general">General / not about one page</option><option value="guides/first-30-days">Your first 30 days in Istanbul</option><option value="guides/residence-permit">Student residence permit</option><option value="guides/university-registration">University registration and enrollment</option><option value="guides/registrations-after-arrival">Essential registrations after arrival</option><option value="guides/rental-agreements">Rental agreements and checklist</option><option value="guides/istanbulkart">Student Istanbulkart</option><option value="guides/housing">Renting without rushing</option><option value="guides/transport">Public transport in Istanbul</option><option value="guides/budget">Build a student budget</option></select></div>
+      <div class="field"><label for="suggest-message">Your message <span class="hint">What should change, and where did you find the correct information? (10–2,000 characters)</span></label><textarea id="suggest-message" name="message" required minlength="10" maxlength="2000"></textarea></div>
+      <div class="field"><label for="suggest-email">Email (optional) <span class="hint">Only if you want a reply. We will not use it for anything else.</span></label><input id="suggest-email" name="email" type="email" maxlength="254" autocomplete="email"></div>
+      <div class="hp-field" aria-hidden="true"><label for="suggest-website">Leave this empty</label><input id="suggest-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
+      <button class="button" type="submit">Send message <span aria-hidden="true">→</span></button>
+    </form>
+    <p class="small-print">Messages are stored with our hosting provider and reviewed manually. See the <a href="privacy.html">privacy notice</a> for details.</p>
+  </main>
+  <footer class="footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark">IS</span><span>Istanbul Student Guide<small>Independent information project</small></span></a><div class="footer-links"><a href="about.html">About</a><a href="suggest.html">Suggest a correction</a><a href="privacy.html">Privacy</a><a href="disclosure.html">Advertising disclosure</a></div><p class="copyright">© <span id="year">2026</span> Istanbul Student Guide. Information is general and may change.</p></footer>
+  <script src="script.js"></script>
+  <script src="student.js"></script>
+</body>
+</html>
