@@ -1,0 +1,15 @@
+# Wrangler config used ONLY for D1 database commands (migrations, admin SQL).
+# It is deliberately not named wrangler.toml, so Cloudflare Pages ignores it and
+# keeps using the bindings you set in the dashboard.
+#
+# Local:  npx wrangler@4.20.0 d1 migrations apply istanbul-student-guide --local -c wrangler.d1.toml
+# Remote: replace database_id below with your real D1 database ID (Cloudflare
+#         dashboard > Storage & Databases > D1 > your database), then use --remote.
+name = "istanbul-student-guide"
+compatibility_date = "2025-06-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "istanbul-student-guide"
+database_id = "local-dev"
+migrations_dir = "migrations"

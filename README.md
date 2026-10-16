@@ -101,3 +101,58 @@ Then open `http://127.0.0.1:8788/student-life`. Test data is stored in `.wrangle
    SELECT page, SUM(helpful) AS yes, COUNT(*) - SUM(helpful) AS no FROM feedback GROUP BY page;
    ```
 Until the binding exists, the buttons and the form show a polite "could not be saved" message; nothing else breaks.
+
+## Rate a guide (star ratings)
+`feedback.html` lets visitors rate a guide from 1 to 5 stars with an optional comment (up to 1,000 characters). No account, name, email, phone, passport, residence permit, or location is collected.
+
+How it works:
+- `feedback.js` loads the public Turnstile site key from `GET /api/student-feedback/config`, shows the Cloudflare Turnstile spam check, and sends `{topic, rating, comment, website, turnstileToken}`.
+- `functions/api/student-feedback/index.js` (POST only) checks, in order: same-site origin, JSON content type, 4 KB body limit, valid JSON with no unknown fields, the honeypot field (`website`, silently ignored if filled), a per-client rate limit, the topic allowlist, an integer rating from 1 to 5, the comment (trimmed, at most 1,000 characters, no email addresses or phone numbers), Turnstile verification, and a site-wide limit of 30 submissions per minute. It then saves the row with a parameterized query. Errors return short, safe messages.
+- `migrations/0001_create_student_feedback.sql` creates the private `student_feedback` table: `id`, `topic`, `rating`, `comment`, `moderation_status` (default `pending`), and `created_at` (set by the database). There is no IP column.
+- **There is no public way to read submissions.** The API only accepts POST, and `_routes.json` + `functions/_middleware.js` return 404 for `/functions`, `/migrations`, `/tests`, `/tools`, `/wrangler.d1.toml`, and `.dev.vars` files.
+
+### Cloudflare setup (one time, free tier)
+1. **Database.** If you have not already: Cloudflare dashboard → **Storage & Databases → D1 → Create** `istanbul-student-guide`. Then in your Pages project → **Settings → Bindings → Add → D1 database**, variable name `DB`.
+2. **Create the table.** Copy the database ID from the D1 page into `database_id` in `wrangler.d1.toml`, then run:
+   ```bash
+   npx --yes wrangler@4.20.0 login
+   npx --yes wrangler@4.20.0 d1 migrations apply istanbul-student-guide --remote -c wrangler.d1.toml
+   ```
+3. **Turnstile.** Dashboard → **Turnstile → Add widget**: name it, add hostname `istanbul-student-guide.pages.dev` (and any custom domain), widget mode **Managed**. Copy the site key and the secret key.
+4. **Keys.** Pages project → **Settings → Variables and Secrets** (Production):
+   - `TURNSTILE_SITE_KEY` = the site key (type: Text; it is public).
+   - `TURNSTILE_SECRET_KEY` = the secret key (type: **Secret**; never put it in a file or in Git).
+5. Redeploy (push a commit, or **Deployments → Retry deployment**).
+
+### Reviewing feedback (admin only)
+Only people with access to your Cloudflare account can read ratings. Use **D1 → istanbul-student-guide → Console**, or Wrangler while logged in:
+```bash
+npx --yes wrangler@4.20.0 d1 execute istanbul-student-guide --remote -c wrangler.d1.toml --command "SELECT id, topic, rating, comment, moderation_status, created_at FROM student_feedback WHERE moderation_status = 'pending' ORDER BY created_at DESC LIMIT 50"
+npx --yes wrangler@4.20.0 d1 execute istanbul-student-guide --remote -c wrangler.d1.toml --command "SELECT topic, COUNT(*) AS ratings, ROUND(AVG(rating), 2) AS average FROM student_feedback WHERE moderation_status != 'spam' GROUP BY topic"
+npx --yes wrangler@4.20.0 d1 execute istanbul-student-guide --remote -c wrangler.d1.toml --command "UPDATE student_feedback SET moderation_status = 'approved' WHERE id = 1"
+```
+Allowed statuses: `pending`, `approved`, `rejected`, `spam`. Nothing is ever published automatically.
+
+### Limits of the rate limiting
+The per-client limit (5 submissions per 10 minutes) uses the visitor's IP address only in memory, hashed, and never writes it to the database. That makes it best-effort:
+- Cloudflare runs many copies of the function in different data centres, and each copy has its own memory, which is also cleared when the copy restarts. A determined sender can exceed the limit.
+- Many students can share one IP address (university Wi-Fi, mobile carriers), so the limit is kept generous to avoid blocking real students.
+- Visitors can change IP addresses (mobile networks, IPv6, VPNs).
+Turnstile and the database-wide limit of 30 submissions per minute are the main protection. If you later move to a custom domain, a Cloudflare WAF rate-limiting rule for `/api/student-feedback` adds an edge-level limit without storing anything in your database.
+
+### Testing locally
+Automated tests (Node 22.5 or newer; no packages to install):
+```bash
+node --test "tests/*.test.mjs"
+```
+End-to-end with Cloudflare's local server and Turnstile **test** keys:
+```bash
+cp .dev.vars.example .dev.vars
+npx --yes wrangler@4.20.0 d1 migrations apply istanbul-student-guide --local -c wrangler.d1.toml
+npx --yes wrangler@4.20.0 pages dev . --d1 DB=local-dev --port 8788
+```
+Open `http://127.0.0.1:8788/feedback`. Check a saved record without printing comment text:
+```bash
+npx --yes wrangler@4.20.0 d1 execute istanbul-student-guide --local -c wrangler.d1.toml --command "SELECT id, topic, rating, length(comment) AS comment_chars, moderation_status, created_at FROM student_feedback ORDER BY id DESC LIMIT 5"
+```
+To test a failed Turnstile check, set `TURNSTILE_SECRET_KEY=2x0000000000000000000000000000000AA` in `.dev.vars` and restart the server. Locally, the per-client rate limit only applies when a request carries a `CF-Connecting-IP` header (Cloudflare adds it in production), for example `curl -H "CF-Connecting-IP: 198.51.100.1" ...`. Local test data stays in `.wrangler/` and is never uploaded.

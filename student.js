@@ -118,6 +118,12 @@
     update();
   }
 
+  // ---------- Print buttons (e.g. printable checklists) ----------
+  for (const button of document.querySelectorAll("[data-print]")) {
+    button.hidden = false;
+    button.addEventListener("click", () => window.print());
+  }
+
   // ---------- Correction / new topic form ----------
   const suggestForm = document.querySelector("#suggest-form");
   if (suggestForm) {

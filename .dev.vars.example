@@ -1,0 +1,13 @@
+# Local development only. Copy this file to .dev.vars (which Git ignores):
+#   cp .dev.vars.example .dev.vars
+# These are Cloudflare's public Turnstile TEST keys; they never protect a real site.
+# Never put real keys in this file. Real keys go in Cloudflare Pages settings.
+
+# Test site key: the widget always passes.
+TURNSTILE_SITE_KEY=1x00000000000000000000AA
+
+# Test secret key: verification always passes.
+TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+
+# To test a failed verification, use this secret instead (always fails):
+# TURNSTILE_SECRET_KEY=2x0000000000000000000000000000000AA

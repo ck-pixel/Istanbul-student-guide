@@ -4,3 +4,4 @@ desktop.ini
 .omc/
 .wrangler/
 node_modules/
+.dev.vars

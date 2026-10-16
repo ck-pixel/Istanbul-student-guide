@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-root="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rate an Istanbul Student Guide page from 1 to 5 stars and tell us how to improve it. No account or personal details needed.">
+  <meta name="theme-color" content="#163b35">
+  <title>Rate a guide — Istanbul Student Guide</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://istanbul-student-guide.pages.dev/feedback">
+  <meta property="og:url" content="https://istanbul-student-guide.pages.dev/feedback">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Istanbul Student Guide">
+  <meta property="og:title" content="Rate a guide — Istanbul Student Guide">
+  <meta property="og:description" content="Rate an Istanbul Student Guide page from 1 to 5 stars and tell us how to improve it. No account or personal details needed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">IS</span><span>Istanbul Student Guide<small>Make the city easier</small></span></a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button><nav class="nav" id="site-nav" aria-label="Main"><a href="index.html#guides">Guides</a><a href="student-life.html">Student life</a><a href="index.html#essentials">Essentials</a><a href="about.html">About</a></nav>
+  </header>
+  <main id="main" class="article">
+    <p class="eyebrow">Help improve the guide</p>
+    <h1>Rate a guide.</h1>
+    <p class="lead">Tell us how useful a guide was. Your rating is private: it is only read by the people who maintain this site, and it is never published.</p>
+    <div class="box box-tip"><p>No account needed. Please do <strong>not</strong> include your name, email, phone number, passport or residence permit details, or where you live. To report a specific error, use <a href="suggest.html">Suggest a correction</a> instead.</p></div>
+    <noscript><div class="box box-warn"><p>This form needs JavaScript for its spam check. You can still <a href="suggest.html">send a suggestion</a>.</p></div></noscript>
+    <form class="form-grid" id="rating-form" novalidate>
+      <div class="field"><label for="rating-topic">Which guide are you rating? <span class="hint">Required</span></label>
+        <select id="rating-topic" name="topic" required aria-describedby="rating-topic-error">
+          <option value="">Choose a guide…</option>
+          <option value="first-30-days">Your first 30 days in Istanbul</option>
+          <option value="residence-permit">Student residence permit</option>
+          <option value="university-registration">University registration and enrollment</option>
+          <option value="registrations-after-arrival">Essential registrations after arrival</option>
+          <option value="rental-agreements">Rental agreements and checklist</option>
+          <option value="istanbulkart">Student İstanbulkart</option>
+          <option value="housing">Finding housing and rental contracts</option>
+          <option value="transport">Public transport in Istanbul</option>
+          <option value="budget">Build a student budget</option>
+          <option value="general">The site in general</option>
+        </select>
+        <span class="field-error" id="rating-topic-error" hidden></span>
+      </div>
+      <div class="field"><fieldset aria-describedby="rating-stars-error rating-stars-value">
+        <legend>Your rating <span class="hint">Required. 1 = not useful, 5 = very useful</span></legend>
+        <div class="star-rating">
+          <label><input type="radio" name="rating" value="1" required><span class="star" aria-hidden="true">★</span><span class="visually-hidden">1 star, not useful</span></label>
+          <label><input type="radio" name="rating" value="2"><span class="star" aria-hidden="true">★</span><span class="visually-hidden">2 stars</span></label>
+          <label><input type="radio" name="rating" value="3"><span class="star" aria-hidden="true">★</span><span class="visually-hidden">3 stars</span></label>
+          <label><input type="radio" name="rating" value="4"><span class="star" aria-hidden="true">★</span><span class="visually-hidden">4 stars</span></label>
+          <label><input type="radio" name="rating" value="5"><span class="star" aria-hidden="true">★</span><span class="visually-hidden">5 stars, very useful</span></label>
+        </div>
+        <p class="star-value" id="rating-stars-value">No rating selected</p>
+        <span class="field-error" id="rating-stars-error" hidden></span>
+      </fieldset></div>
+      <div class="field"><label for="rating-comment">Comment (optional) <span class="hint">What helped, or what was missing? Up to 1,000 characters.</span></label>
+        <textarea id="rating-comment" name="comment" maxlength="1000" aria-describedby="rating-comment-count rating-comment-error"></textarea>
+        <span class="char-count" id="rating-comment-count">0 / 1,000</span>
+        <span class="field-error" id="rating-comment-error" hidden></span>
+      </div>
+      <div class="hp-field" aria-hidden="true"><label for="rating-website">Leave this empty</label><input id="rating-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <div class="field"><div id="turnstile-widget" class="turnstile-box"></div><p class="hint" id="turnstile-status">Loading spam check…</p></div>
+      <p class="form-status" id="rating-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
+      <div class="form-actions">
+        <button class="button" type="submit" id="rating-submit" disabled>Send rating <span aria-hidden="true">→</span></button>
+        <button class="button button-secondary" type="button" id="rating-again" hidden>Rate another guide</button>
+      </div>
+    </form>
+    <p class="small-print">We store only the guide, your rating, your optional comment, a review status, and the date and time. We do not store your IP address. The spam check is provided by Cloudflare Turnstile. See the <a href="privacy.html#star-ratings">privacy notice</a>.</p>
+  </main>
+  <footer class="footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark">IS</span><span>Istanbul Student Guide<small>Independent information project</small></span></a><div class="footer-links"><a href="about.html">About</a><a href="suggest.html">Suggest a correction</a><a href="feedback.html">Rate a guide</a><a href="privacy.html">Privacy</a><a href="disclosure.html">Advertising disclosure</a></div><p class="copyright">© <span id="year">2026</span> Istanbul Student Guide. Information is general and may change.</p></footer>
+  <script src="script.js"></script>
+  <script src="feedback.js"></script>
+</body>
+</html>
