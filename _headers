@@ -7,3 +7,9 @@
 
 /README.md
   X-Robots-Tag: noindex
+
+# Images rarely change: let browsers reuse them for 30 days.
+# If you replace an image, give the new file a new name so visitors get it at once.
+# HTML, CSS and JS keep Cloudflare's default (revalidate on every visit).
+/images/*
+  Cache-Control: public, max-age=2592000
