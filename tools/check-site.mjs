@@ -15,9 +15,15 @@ const problems = [];
 const fail = (msg) => problems.push(msg);
 
 const htmlFiles = [
-  ...fs.readdirSync(root).filter((f) => f.endsWith(".html")).map((f) => path.join(root, f)),
+  ...fs.readdirSync(root).filter((f) => f.endsWith(".html") && f !== "googlec37b457c7bdbb103.html").map((f) => path.join(root, f)),
   ...fs.readdirSync(path.join(root, "guides")).filter((f) => f.endsWith(".html")).map((f) => path.join(root, "guides", f)),
 ];
+
+// Google Search Console serves this file as a verification artifact, not a page.
+const googleVerification = "google-site-verification: googlec37b457c7bdbb103.html";
+if (fs.readFileSync(path.join(root, "googlec37b457c7bdbb103.html"), "utf8") !== googleVerification) {
+  fail("googlec37b457c7bdbb103.html: missing or incorrect Google verification content");
+}
 const idsByFile = new Map(htmlFiles.map((f) => [f, new Set([...fs.readFileSync(f, "utf8").matchAll(/\bid="([^"]+)"/g)].map((m) => m[1]))]));
 
 let linkCount = 0;
