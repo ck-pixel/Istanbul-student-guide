@@ -15,7 +15,7 @@
   <meta property="og:description" content="Practical, independent guides for students and newcomers in Istanbul: getting around by public transport, building a budget, and renting safely.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,33 +25,44 @@
     <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">☰</button><nav class="nav" id="site-nav" aria-label="Main"><a href="#guides">Guides</a><a href="student-life.html">Student life</a><a href="#essentials">Essentials</a><a href="about.html">About</a></nav>
   </header>
   <main id="main">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">A practical guide for newcomers</p>
-        <h1>Start your Istanbul life with <em>less stress.</em></h1>
-        <p>Clear, practical explainers for students and newcomers: getting around, planning your budget, finding services, and settling into the city.</p>
-        <a class="button" href="#guides">Explore the guides <span aria-hidden="true">↘</span></a>
+    <section class="home-hero" aria-labelledby="home-title">
+      <img class="home-hero-img" src="images/hero-skyline-1280.webp" srcset="images/hero-skyline-640.webp 640w, images/hero-skyline-1280.webp 1280w, images/hero-skyline-1920.webp 1920w" sizes="100vw" width="640" height="360" alt="Istanbul's Cihangir neighbourhood rising above the Bosphorus, with a city ferry crossing the water" fetchpriority="high" decoding="async">
+      <div class="home-hero-inner">
+        <p class="eyebrow">A practical guide for international students</p>
+        <h1 id="home-title">Start your Istanbul life with <em>less stress.</em></h1>
+        <p class="lead">Clear, independent guides for students and newcomers: residence permits, university registration, housing, İstanbulkart, and your first weeks in the city, each linked to official sources.</p>
+        <form class="search-box" role="search" action="student-life.html" method="get"><label class="hp-field" for="home-search">Search the guides</label><input id="home-search" name="q" type="search" placeholder="Search, e.g. ikamet, deposit, İstanbulkart"><button class="button" type="submit">Search</button></form>
+        <ul class="quick-links" aria-label="Popular topics">
+          <li><a href="guides/residence-permit.html">Residence permit</a></li>
+          <li><a href="guides/istanbulkart.html">İstanbulkart</a></li>
+          <li><a href="guides/housing.html">Housing</a></li>
+          <li><a href="guides/university-registration.html">University registration</a></li>
+          <li><a href="guides/first-30-days.html">First 30 days</a></li>
+        </ul>
       </div>
-      <div class="hero-art" role="img" aria-label="Illustration of Istanbul's skyline">
-        <div class="sun"></div><div class="mosque"><i></i><b></b><span></span></div>
-        <div class="tower"></div><div class="water"></div>
-        <div class="art-label">Two continents.<br>One new beginning.</div>
-      </div>
+      <p class="photo-credit">Photo: SegLig, <a href="credits.html#hero-skyline">CC BY 4.0</a></p>
     </section>
 
-    <section class="notice"><span class="notice-dot"></span><p><strong>Independent guide.</strong> Details, prices, and rules can change. Always verify important information with official sources before making a decision.</p></section>
+    <div class="trust-strip">
+      <div><strong>Official sources first</strong>Every guide links to the Turkish authority or provider that sets the rules.</div>
+      <div><strong>Checked and dated</strong>Changeable details show a last-verified date and are flagged when unconfirmed.</div>
+      <div><strong>Independent and free</strong>No paid placements. Suggest a correction any time.</div>
+    </div>
 
-    <section class="student-band" aria-labelledby="student-band-title">
-      <div><p class="eyebrow">New: International Student Life</p><h2 id="student-band-title">Residence permits, enrollment, renting, and more.</h2><p>Six step-by-step guides for international students, with official links and a last-verified date on each. <a class="text-link" href="student-life.html">See all student guides <span aria-hidden="true">→</span></a></p></div>
-      <form class="search-box" role="search" action="student-life.html" method="get"><label class="hp-field" for="home-search">Search the student guides</label><input id="home-search" name="q" type="search" placeholder="Search, e.g. ikamet, deposit"><button class="button" type="submit">Search <span aria-hidden="true">↘</span></button></form>
-    </section>
+    <section class="notice notice-home"><span class="notice-dot"></span><p><strong>Independent guide.</strong> Details, prices, and rules can change. Always verify important information with official sources before making a decision.</p></section>
 
-    <section class="section" id="guides">
-      <div class="section-heading"><div><p class="eyebrow">Explore by topic</p><h2>Useful things to know</h2></div><span class="section-note">Start with the essentials</span></div>
+    <section class="section" id="guides" aria-labelledby="guides-title">
+      <div class="section-heading"><div><p class="eyebrow">Explore by topic</p><h2 id="guides-title">Guides for international students</h2></div><a class="text-link" href="student-life.html">Search and filter all guides <span aria-hidden="true">→</span></a></div>
       <div class="cards">
-        <a class="guide-card" href="guides/transport.html"><span class="card-icon" aria-hidden="true">↗</span><p class="card-kicker">Getting around</p><h3>Public transport in Istanbul</h3><p>Understand transport cards, routes, and how to plan a journey.</p><span class="read-link">Read guide <span aria-hidden="true">→</span></span></a>
-        <a class="guide-card" href="guides/budget.html"><span class="card-icon" aria-hidden="true">₺</span><p class="card-kicker">Money basics</p><h3>Build a student budget</h3><p>A simple framework for tracking rent, food, transport, and extras.</p><span class="read-link">Read guide <span aria-hidden="true">→</span></span></a>
-        <a class="guide-card" href="guides/housing.html"><span class="card-icon" aria-hidden="true">⌂</span><p class="card-kicker">Finding a place</p><h3>Finding housing and rental contracts</h3><p>Where to search, how to avoid scams, and why to get a written contract when you pay.</p><span class="read-link">Read guide <span aria-hidden="true">→</span></span></a>
+        <a class="guide-card" href="guides/first-30-days.html"><img class="card-media" src="images/ferry-960.webp" srcset="images/ferry-480.webp 480w, images/ferry-960.webp 960w, images/ferry-1440.webp 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 360px" width="480" height="320" alt="" loading="lazy" decoding="async"><span class="card-body"><span class="card-kicker">First steps</span><h3>Your first 30 days in Istanbul</h3><span class="card-text">A stage-by-stage checklist from before you fly to your first month in the city.</span><span class="read-link">Read guide <span aria-hidden="true">→</span></span></span></a>
+        <a class="guide-card" href="guides/residence-permit.html"><img class="card-media" src="images/gen-paperwork-960.webp" srcset="images/gen-paperwork-480.webp 480w, images/gen-paperwork-960.webp 960w, images/gen-paperwork-1440.webp 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 360px" width="480" height="270" alt="" loading="lazy" decoding="async"><span class="card-body"><span class="card-kicker">Legal &amp; paperwork</span><h3>Student residence permit</h3><span class="card-text">Who needs one, applying on e-İkamet, documents, the 2026 card fee, and deadlines.</span><span class="read-link">Read guide <span aria-hidden="true">→</span></span></span></a>
+        <a class="guide-card" href="guides/university-registration.html"><img class="card-media" src="images/istanbul-university-gate-960.webp" srcset="images/istanbul-university-gate-480.webp 480w, images/istanbul-university-gate-960.webp 960w, images/istanbul-university-gate-1440.webp 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 360px" width="480" height="384" alt="" loading="lazy" decoding="async"><span class="card-body"><span class="card-kicker">University</span><h3>University registration</h3><span class="card-text">From acceptance letter to final registration, with a printable checklist.</span><span class="read-link">Read guide <span aria-hidden="true">→</span></span></span></a>
+        <a class="guide-card" href="guides/istanbulkart.html"><img class="card-media" src="images/istanbulkart-validator-960.webp" srcset="images/istanbulkart-validator-480.webp 480w, images/istanbulkart-validator-960.webp 960w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 360px" width="480" height="854" alt="" loading="lazy" decoding="async"><span class="card-body"><span class="card-kicker">Transport</span><h3>Student İstanbulkart</h3><span class="card-text">Card types, applying online, collecting your card, current fares, and top-ups.</span><span class="read-link">Read guide <span aria-hidden="true">→</span></span></span></a>
+        <a class="guide-card" href="guides/housing.html"><img class="card-media" src="images/kadikoy-residential-960.webp" srcset="images/kadikoy-residential-480.webp 480w, images/kadikoy-residential-960.webp 960w, images/kadikoy-residential-1440.webp 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 360px" width="480" height="360" alt="" loading="lazy" decoding="async"><span class="card-body"><span class="card-kicker">Housing</span><h3>Finding housing and rental contracts</h3><span class="card-text">Where to search, how to avoid scams, and why to get a written contract when you pay.</span><span class="read-link">Read guide <span aria-hidden="true">→</span></span></span></a>
+        <a class="guide-card" href="guides/rental-agreements.html"><img class="card-media" src="images/gen-rental-keys-960.webp" srcset="images/gen-rental-keys-480.webp 480w, images/gen-rental-keys-960.webp 960w, images/gen-rental-keys-1440.webp 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 360px" width="480" height="270" alt="" loading="lazy" decoding="async"><span class="card-body"><span class="card-kicker">Housing</span><h3>Rental agreements and checklist</h3><span class="card-text">Your rights on deposits and rent increases, and a checklist before you sign.</span><span class="read-link">Read guide <span aria-hidden="true">→</span></span></span></a>
+        <a class="guide-card" href="guides/registrations-after-arrival.html"><img class="card-media" src="images/gen-sim-960.webp" srcset="images/gen-sim-480.webp 480w, images/gen-sim-960.webp 960w, images/gen-sim-1440.webp 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 360px" width="480" height="270" alt="" loading="lazy" decoding="async"><span class="card-body"><span class="card-kicker">Legal &amp; paperwork</span><h3>Registrations after arrival</h3><span class="card-text">Foreigner ID number, e-Devlet, tax number, phone registration, insurance, and address.</span><span class="read-link">Read guide <span aria-hidden="true">→</span></span></span></a>
+        <a class="guide-card" href="guides/transport.html"><img class="card-media" src="images/tram-t1-960.webp" srcset="images/tram-t1-480.webp 480w, images/tram-t1-960.webp 960w, images/tram-t1-1440.webp 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 360px" width="480" height="360" alt="" loading="lazy" decoding="async"><span class="card-body"><span class="card-kicker">Getting around</span><h3>Public transport in Istanbul</h3><span class="card-text">Understand transport cards, routes, and how to plan a journey.</span><span class="read-link">Read guide <span aria-hidden="true">→</span></span></span></a>
+        <a class="guide-card" href="guides/budget.html"><img class="card-media" src="images/kadikoy-street-960.webp" srcset="images/kadikoy-street-480.webp 480w, images/kadikoy-street-960.webp 960w, images/kadikoy-street-1440.webp 1440w" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 360px" width="480" height="288" alt="" loading="lazy" decoding="async"><span class="card-body"><span class="card-kicker">Money basics</span><h3>Build a student budget</h3><span class="card-text">A simple framework for tracking rent, food, transport, and extras.</span><span class="read-link">Read guide <span aria-hidden="true">→</span></span></span></a>
       </div>
     </section>
 
@@ -71,7 +82,7 @@
       <a class="button button-light" href="about.html">About this project <span aria-hidden="true">→</span></a>
     </section>
   </main>
-  <footer class="footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark">IS</span><span>Istanbul Student Guide<small>Independent information project</small></span></a><div class="footer-links"><a href="about.html">About</a><a href="suggest.html">Suggest a correction</a><a href="feedback.html">Rate a guide</a><a href="privacy.html">Privacy</a><a href="disclosure.html">Advertising disclosure</a></div><p class="copyright">© <span id="year">2026</span> Istanbul Student Guide. Information is general and may change.</p></footer>
+  <footer class="footer"><a class="brand brand-footer" href="index.html"><span class="brand-mark">IS</span><span>Istanbul Student Guide<small>Independent information project</small></span></a><div class="footer-links"><a href="about.html">About</a><a href="suggest.html">Suggest a correction</a><a href="feedback.html">Rate a guide</a><a href="credits.html">Image credits</a><a href="privacy.html">Privacy</a><a href="disclosure.html">Advertising disclosure</a></div><p class="copyright">© <span id="year">2026</span> Istanbul Student Guide. Information is general and may change.</p></footer>
   <script src="script.js"></script>
 </body>
 </html>

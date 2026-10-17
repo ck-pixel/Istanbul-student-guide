@@ -1,0 +1,528 @@
+[
+ {
+  "id": "hero-skyline",
+  "title": "File:Istanbul skyline 01.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Istanbul_skyline_01.jpg",
+  "author": "SegLig",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "alt": "Istanbul's Cihangir neighbourhood rising above the Bosphorus, with a city ferry crossing the water",
+  "ratio": 1.7778,
+  "files": [
+   {
+    "w": 640,
+    "h": 360,
+    "file": "images/hero-skyline-640.webp",
+    "kb": 46
+   },
+   {
+    "w": 1280,
+    "h": 720,
+    "file": "images/hero-skyline-1280.webp",
+    "kb": 153
+   },
+   {
+    "w": 1920,
+    "h": 1080,
+    "file": "images/hero-skyline-1920.webp",
+    "kb": 279
+   }
+  ]
+ },
+ {
+  "id": "istanbulkart-card",
+  "title": "File:Istanbulkart anonim.png",
+  "page": "https://commons.wikimedia.org/wiki/File:Istanbulkart_anonim.png",
+  "author": "Belbim A.Ş.",
+  "license": "Public domain",
+  "licenseUrl": "",
+  "alt": "The standard İstanbulkart transport card",
+  "ratio": 0.6275,
+  "files": [
+   {
+    "w": 320,
+    "h": 510,
+    "file": "images/istanbulkart-card-320.webp",
+    "kb": 9
+   },
+   {
+    "w": 640,
+    "h": 1021,
+    "file": "images/istanbulkart-card-640.webp",
+    "kb": 19
+   }
+  ]
+ },
+ {
+  "id": "istanbulkart-validator",
+  "title": "File:Istanbulkart validatör.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Istanbulkart_validat%C3%B6r.jpg",
+  "author": "Kurmanbek",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "alt": "An İstanbulkart card reader (validator) at a public transport turnstile",
+  "ratio": 0.5621,
+  "files": [
+   {
+    "w": 480,
+    "h": 854,
+    "file": "images/istanbulkart-validator-480.webp",
+    "kb": 18
+   },
+   {
+    "w": 960,
+    "h": 1707,
+    "file": "images/istanbulkart-validator-960.webp",
+    "kb": 53
+   }
+  ]
+ },
+ {
+  "id": "biletmatik",
+  "title": "File:Biletmatik İstanbul.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Biletmatik_%C4%B0stanbul.JPG",
+  "author": "Jelican9",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "alt": "A Biletmatik ticket and top-up machine for İstanbulkart",
+  "ratio": 0.6621,
+  "files": [
+   {
+    "w": 480,
+    "h": 725,
+    "file": "images/biletmatik-480.webp",
+    "kb": 26
+   },
+   {
+    "w": 960,
+    "h": 1450,
+    "file": "images/biletmatik-960.webp",
+    "kb": 93
+   }
+  ]
+ },
+ {
+  "id": "ferry",
+  "title": "File:A Şehir Hatları Ferry.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:A_%C5%9Eehir_Hatlar%C4%B1_Ferry.jpg",
+  "author": "No-Discussion-1301",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "alt": "A Şehir Hatları city ferry sailing on the Bosphorus",
+  "ratio": 1.5,
+  "files": [
+   {
+    "w": 480,
+    "h": 320,
+    "file": "images/ferry-480.webp",
+    "kb": 17
+   },
+   {
+    "w": 960,
+    "h": 640,
+    "file": "images/ferry-960.webp",
+    "kb": 67
+   },
+   {
+    "w": 1440,
+    "h": 960,
+    "file": "images/ferry-1440.webp",
+    "kb": 206
+   }
+  ]
+ },
+ {
+  "id": "metro-platform",
+  "title": "File:Haliç (Istanbul Metro).JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Hali%C3%A7_(Istanbul_Metro).JPG",
+  "author": "My another account (talk)",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "alt": "A metro train at the Haliç station platform above the Golden Horn",
+  "ratio": 1.5047,
+  "files": [
+   {
+    "w": 480,
+    "h": 319,
+    "file": "images/metro-platform-480.webp",
+    "kb": 16
+   },
+   {
+    "w": 960,
+    "h": 638,
+    "file": "images/metro-platform-960.webp",
+    "kb": 43
+   },
+   {
+    "w": 1440,
+    "h": 957,
+    "file": "images/metro-platform-1440.webp",
+    "kb": 75
+   }
+  ]
+ },
+ {
+  "id": "metrobus",
+  "title": "File:Incirli Metrobus station Mars 2013.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Incirli_Metrobus_station_Mars_2013.jpg",
+  "author": "Arild Vågen",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "alt": "Metrobüs buses at İncirli station on their dedicated lanes",
+  "ratio": 1.4953,
+  "files": [
+   {
+    "w": 480,
+    "h": 321,
+    "file": "images/metrobus-480.webp",
+    "kb": 29
+   },
+   {
+    "w": 960,
+    "h": 641,
+    "file": "images/metrobus-960.webp",
+    "kb": 105
+   },
+   {
+    "w": 1440,
+    "h": 962,
+    "file": "images/metrobus-1440.webp",
+    "kb": 234
+   }
+  ]
+ },
+ {
+  "id": "iett-bus",
+  "title": "File:IETT Buses at Kadıköy.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:IETT_Buses_at_Kad%C4%B1k%C3%B6y.jpg",
+  "author": "Kuzel06",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "alt": "İETT city buses parked at the Kadıköy terminal",
+  "ratio": 1.5047,
+  "files": [
+   {
+    "w": 480,
+    "h": 319,
+    "file": "images/iett-bus-480.webp",
+    "kb": 24
+   },
+   {
+    "w": 960,
+    "h": 637,
+    "file": "images/iett-bus-960.webp",
+    "kb": 89
+   },
+   {
+    "w": 1440,
+    "h": 956,
+    "file": "images/iett-bus-1440.webp",
+    "kb": 196
+   }
+  ]
+ },
+ {
+  "id": "tram-t1",
+  "title": "File:T1 Istanbul Tram with Hagia Sophia in the background, March 2024.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:T1_Istanbul_Tram_with_Hagia_Sophia_in_the_background,_March_2024.jpg",
+  "author": "Calistemon",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "alt": "A T1 tram passing with Hagia Sophia in the background",
+  "ratio": 1.3333,
+  "files": [
+   {
+    "w": 480,
+    "h": 360,
+    "file": "images/tram-t1-480.webp",
+    "kb": 24
+   },
+   {
+    "w": 960,
+    "h": 720,
+    "file": "images/tram-t1-960.webp",
+    "kb": 82
+   },
+   {
+    "w": 1440,
+    "h": 1080,
+    "file": "images/tram-t1-1440.webp",
+    "kb": 175
+   }
+  ]
+ },
+ {
+  "id": "bogazici-campus",
+  "title": "File:Wisteria south campus Bogazici University 2022.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Wisteria_south_campus_Bogazici_University_2022.jpg",
+  "author": "Furkan Akkurt",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "alt": "Wisteria in bloom on Boğaziçi University's south campus",
+  "ratio": 1.3333,
+  "files": [
+   {
+    "w": 480,
+    "h": 360,
+    "file": "images/bogazici-campus-480.webp",
+    "kb": 40
+   },
+   {
+    "w": 960,
+    "h": 720,
+    "file": "images/bogazici-campus-960.webp",
+    "kb": 179
+   },
+   {
+    "w": 1440,
+    "h": 1080,
+    "file": "images/bogazici-campus-1440.webp",
+    "kb": 441
+   }
+  ]
+ },
+ {
+  "id": "istanbul-university-gate",
+  "title": "File:Istanbul University Entrance Gate, 2025.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Istanbul_University_Entrance_Gate,_2025.jpg",
+  "author": "Medelam",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "alt": "The monumental entrance gate of Istanbul University on Beyazıt Square",
+  "ratio": 1.25,
+  "files": [
+   {
+    "w": 480,
+    "h": 384,
+    "file": "images/istanbul-university-gate-480.webp",
+    "kb": 20
+   },
+   {
+    "w": 960,
+    "h": 768,
+    "file": "images/istanbul-university-gate-960.webp",
+    "kb": 81
+   },
+   {
+    "w": 1440,
+    "h": 1152,
+    "file": "images/istanbul-university-gate-1440.webp",
+    "kb": 178
+   }
+  ]
+ },
+ {
+  "id": "kadikoy-street",
+  "title": "File:Istanbul - Kadıköy.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Istanbul_-_Kad%C4%B1k%C3%B6y.jpg",
+  "author": "Jorge Franganillo",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "alt": "The Kadıköy lighthouse and waterfront on Istanbul’s Asian side",
+  "ratio": 1.6667,
+  "files": [
+   {
+    "w": 480,
+    "h": 288,
+    "file": "images/kadikoy-street-480.webp",
+    "kb": 23
+   },
+   {
+    "w": 960,
+    "h": 576,
+    "file": "images/kadikoy-street-960.webp",
+    "kb": 95
+   },
+   {
+    "w": 1440,
+    "h": 864,
+    "file": "images/kadikoy-street-1440.webp",
+    "kb": 218
+   }
+  ]
+ },
+ {
+  "id": "kadikoy-residential",
+  "title": "File:A regular street in Kadıköy, İstanbul.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:A_regular_street_in_Kad%C4%B1k%C3%B6y,_%C4%B0stanbul.jpg",
+  "author": "Raicem",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "alt": "A quiet residential street with apartment buildings in Kadıköy",
+  "ratio": 1.3333,
+  "files": [
+   {
+    "w": 480,
+    "h": 360,
+    "file": "images/kadikoy-residential-480.webp",
+    "kb": 35
+   },
+   {
+    "w": 960,
+    "h": 720,
+    "file": "images/kadikoy-residential-960.webp",
+    "kb": 145
+   },
+   {
+    "w": 1440,
+    "h": 1080,
+    "file": "images/kadikoy-residential-1440.webp",
+    "kb": 327
+   }
+  ]
+ },
+ {
+  "id": "kadikoy-2024",
+  "title": "File:Street in Kadıköy, Istanbul (2024).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Street_in_Kad%C4%B1k%C3%B6y,_Istanbul_(2024).jpg",
+  "author": "Premeditated",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "alt": "Shops and pedestrians on a street in Kadıköy",
+  "ratio": 1.3333,
+  "files": [
+   {
+    "w": 480,
+    "h": 360,
+    "file": "images/kadikoy-2024-480.webp",
+    "kb": 34
+   },
+   {
+    "w": 960,
+    "h": 720,
+    "file": "images/kadikoy-2024-960.webp",
+    "kb": 132
+   },
+   {
+    "w": 1440,
+    "h": 1080,
+    "file": "images/kadikoy-2024-1440.webp",
+    "kb": 290
+   }
+  ]
+ },
+ {
+  "id": "gen-rental-keys",
+  "title": "Illustrative image",
+  "page": "",
+  "author": "Generated with Higgsfield (z_image model) for this site",
+  "license": "Generated image; not a photograph of a real event or document",
+  "licenseUrl": "",
+  "alt": "Illustration: a person holding apartment keys over a signed rental agreement on a table",
+  "ratio": 1.7778,
+  "files": [
+   {
+    "w": 480,
+    "h": 270,
+    "file": "images/gen-rental-keys-480.webp",
+    "kb": 7
+   },
+   {
+    "w": 960,
+    "h": 540,
+    "file": "images/gen-rental-keys-960.webp",
+    "kb": 19
+   },
+   {
+    "w": 1440,
+    "h": 810,
+    "file": "images/gen-rental-keys-1440.webp",
+    "kb": 33
+   }
+  ],
+  "generated": true
+ },
+ {
+  "id": "gen-paperwork",
+  "title": "Illustrative image",
+  "page": "",
+  "author": "Generated with Higgsfield (z_image model) for this site",
+  "license": "Generated image; not a photograph of a real event or document",
+  "licenseUrl": "",
+  "alt": "Illustration: a student placing blank papers into a navy folder at a desk with a laptop and tea",
+  "ratio": 1.7778,
+  "files": [
+   {
+    "w": 480,
+    "h": 270,
+    "file": "images/gen-paperwork-480.webp",
+    "kb": 7
+   },
+   {
+    "w": 960,
+    "h": 540,
+    "file": "images/gen-paperwork-960.webp",
+    "kb": 16
+   },
+   {
+    "w": 1440,
+    "h": 810,
+    "file": "images/gen-paperwork-1440.webp",
+    "kb": 26
+   }
+  ],
+  "generated": true
+ },
+ {
+  "id": "gen-sim",
+  "title": "Illustrative image",
+  "page": "",
+  "author": "Generated with Higgsfield (z_image model) for this site",
+  "license": "Generated image; not a photograph of a real event or document",
+  "licenseUrl": "",
+  "alt": "Illustration: a smartphone and a plain SIM card on a café table with tea, a ferry visible through the window",
+  "ratio": 1.7778,
+  "files": [
+   {
+    "w": 480,
+    "h": 270,
+    "file": "images/gen-sim-480.webp",
+    "kb": 9
+   },
+   {
+    "w": 960,
+    "h": 540,
+    "file": "images/gen-sim-960.webp",
+    "kb": 22
+   },
+   {
+    "w": 1440,
+    "h": 810,
+    "file": "images/gen-sim-1440.webp",
+    "kb": 36
+   }
+  ],
+  "generated": true
+ },
+ {
+  "id": "gen-library",
+  "title": "Illustrative image",
+  "page": "",
+  "author": "Generated with Higgsfield (z_image model) for this site",
+  "license": "Generated image; not a photograph of a real event or document",
+  "licenseUrl": "",
+  "alt": "Illustration: students studying with laptops in a bright university library",
+  "ratio": 1.7778,
+  "files": [
+   {
+    "w": 480,
+    "h": 270,
+    "file": "images/gen-library-480.webp",
+    "kb": 11
+   },
+   {
+    "w": 960,
+    "h": 540,
+    "file": "images/gen-library-960.webp",
+    "kb": 24
+   },
+   {
+    "w": 1440,
+    "h": 810,
+    "file": "images/gen-library-1440.webp",
+    "kb": 39
+   }
+  ],
+  "generated": true
+ }
+]
